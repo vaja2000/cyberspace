@@ -1,0 +1,42 @@
+mat-toolbar:first-child {
+    height: 60px;
+    .comunication {
+        width: 1400px;
+        margin: auto;
+        display: flex;
+        section {
+            display: flex;
+            width: calc(100% / 3);
+        }
+        .left {
+            align-items: center;
+        }
+        .center {
+            justify-content: center;
+            align-items: center;
+            h1 {
+                font-family: cursive;
+                font-weight: bold;
+                color: rgb(63, 81, 181);
+                text-shadow: 1.5px 1.5px 1px rgb(0, 0, 0);
+            }
+        }
+        .right {
+            justify-content: flex-end;
+            button {
+                margin: 7px;
+            }
+        }
+    }
+}
+mat-toolbar:last-child {
+    height: 100px;
+    .navbar {
+        margin: auto;
+        display: flex;
+        width: 1400px;
+        .dropdownBtn {
+            display: none;
+        }
+    }
+}
