@@ -1,16 +1,17 @@
 <mat-toolbar>
     <div class="comunication">
         <section class="left">
-            <a mat-button href="https://www.google.com/" target="_blank">
-                <mat-icon class="mat-18" color="primary">facebook</mat-icon>
-            </a>
-            <a mat-button href="https://www.google.com/" target="_blank">
-                <mat-icon class="mat-18" color="primary">call</mat-icon>
-                +995 555 55 55 55
-            </a>
+            <div>
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                (click)="search()">
+                    <mat-icon>search</mat-icon>
+                </button>
+                <input type="search" 
+                *ngIf="searchStatus">
+            </div>
         </section>
         <section class="center">
-            <h1>Cyber Room</h1>
+            <h1>Cyber Space</h1>
         </section>
         <section class="right">
             <button mat-raised-button>შესვლა</button>
@@ -20,17 +21,34 @@
 </mat-toolbar>
 <mat-toolbar color="primary">
     <div class="navbar">
-        <section>
-            <div class="dropdownBtn">
-                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                    <mat-icon>menu</mat-icon>
-                </button>
-            </div>
-            <div class="logo"></div>
-            <div class="cart-person">
-                <div class="cart-favourite"></div>
-                <div class="person"></div>
-            </div>
-        </section>
+        <ul>
+            <li
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}"
+            >მთავარი</li>
+            <li 
+            routerLink="services"
+            routerLinkActive="active"
+            >სერვისები</li>
+            <li 
+            routerLink="about-us"
+            routerLinkActive="active"
+            >ჩვენს შესახებ</li>
+            <li 
+            routerLink="contact"
+            routerLinkActive="active"
+            >კონტაქტი</li>
+        </ul>
+        <div class="logo"></div>
+        <div class="cart">
+            <button matBadge="1" matBadgeColor="warn" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+            <button matBadge="1" matBadgeColor="warn" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+        </div>
+        <div class="user"></div>
     </div>
 </mat-toolbar>
