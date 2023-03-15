@@ -20,7 +20,7 @@ import { ServicesComponent } from './main/services/services.component';
 import { AboutUsComponent } from './main/about-us/about-us.component';
 import { ContactComponent } from './main/contact/contact.component';
 import { UserPageComponent } from './main/user-page/user-page.component';
-import { CarouselComponent } from './main/home/carousel/carousel.component';
+import { HeaderComponent } from './main/home/header/header.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { CarouselComponent } from './main/home/carousel/carousel.component';
     AboutUsComponent,
     ContactComponent,
     UserPageComponent,
-    CarouselComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

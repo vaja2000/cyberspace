@@ -10,29 +10,29 @@ mat-toolbar:first-child {
         }
         .left {
             align-items: center;
-            div {
-                padding: 3px;
-                background-color: rgb(255, 255, 255);
-                border-radius: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-sizing: border-box;
-                border: 2px solid rgb(63, 81, 181);
-                input {
-                    outline: none;
-                    border: none;
-                    width: 200px;
-                    margin-left: 5px;
-                    animation-name: show;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                    @keyframes show {
-                        0% { width: 0px; }
-                        100% { width: 200px; }
-                    }
-                }
-            }
+            // div {
+            //     padding: 3px;
+            //     background-color: rgb(255, 255, 255);
+            //     border-radius: 50px;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     box-sizing: border-box;
+            //     border: 2px solid rgb(63, 81, 181);
+            //     input {
+            //         outline: none;
+            //         border: none;
+            //         width: 200px;
+            //         margin-left: 5px;
+            //         animation-name: show;
+            //         animation-duration: 1s;
+            //         animation-fill-mode: forwards;
+            //         @keyframes show {
+            //             0% { width: 0px; }
+            //             100% { width: 200px; }
+            //         }
+            //     }
+            // }
         }
         .center {
             justify-content: center;
@@ -60,6 +60,9 @@ mat-toolbar:last-child {
         display: flex;
         justify-content: space-between;
         width: 1400px;
+        .logo {
+            width: 260px;
+        }
         ul {
             padding: 0;
             display: flex;
@@ -68,24 +71,56 @@ mat-toolbar:last-child {
                 margin: 0px 10px;
                 padding: 8px;
                 font-size: 16px;
+                letter-spacing: 1px;
                 font-weight: bold;
+                transition: .3s;
                 cursor: pointer;
                 &:hover {
                     color: rgba(255, 254, 254, 0.703);
                 }
             }
             .active {
+                font-size: 22px;
                 text-shadow: 2px 2px 1px rgb(0, 0, 0);
-                color: rgba(255, 254, 254, 0.703);
+                color: rgb(255, 254, 254);
             }
         }
-        .cart {
+        // .cart {
+        //     display: flex;
+        //     align-items: center;
+        //     button {
+        //         margin: 0px 5px;
+        //         mat-icon {
+        //             font-size: 30px;
+        //         }
+        //     }
+        // }
+        .search {
             display: flex;
             align-items: center;
-            button {
-                margin: 0px 5px;
-                mat-icon {
-                    font-size: 30px;
+            justify-content: flex-end;
+            width: 260px;
+            div {
+                padding: 3px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                box-sizing: border-box;
+                border: 2px solid rgb(63, 81, 181);
+                input {
+                    outline: none;
+                    border: none;
+                    width: 200px;
+                    margin-left: 5px;
+                    animation-name: show;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    @keyframes show {
+                        0% { width: 0px; }
+                        100% { width: 200px; }
+                    }
                 }
             }
         }

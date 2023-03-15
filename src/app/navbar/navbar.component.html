@@ -1,26 +1,36 @@
 <mat-toolbar>
     <div class="comunication">
         <section class="left">
-            <div>
+            <!-- <div>
                 <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
                 (click)="search()">
                     <mat-icon>search</mat-icon>
                 </button>
                 <input type="search" 
                 *ngIf="searchStatus">
-            </div>
+            </div> -->
+            <button mat-icon-button color="primary" aria-label="Example icon button with a vertical three dot icon">
+                <mat-icon>facebook</mat-icon>
+            </button>
         </section>
         <section class="center">
             <h1>Cyber Space</h1>
         </section>
         <section class="right">
-            <button mat-raised-button>შესვლა</button>
-            <button mat-raised-button color="primary">რეგისტრაცია</button>
+            <button matBadge="1" matBadgeColor="warn" mat-raised-button color="primary">
+                <mat-icon class="mat-18">shopping_cart</mat-icon>
+                კალათა
+            </button>
+            <!-- <button mat-raised-button>შესვლა</button>
+            <button mat-raised-button color="primary">რეგისტრაცია</button> -->
         </section>
     </div>
 </mat-toolbar>
 <mat-toolbar color="primary">
     <div class="navbar">
+        <div class="logo">
+            
+        </div>
         <ul>
             <li
             routerLink="/"
@@ -40,15 +50,24 @@
             routerLinkActive="active"
             >კონტაქტი</li>
         </ul>
-        <div class="logo"></div>
-        <div class="cart">
+        <div class="search">
+            <div>
+                <input type="search" 
+                *ngIf="searchStatus">
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                (click)="search()">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </div>
+        </div>
+        <!-- <div class="cart">
             <button matBadge="1" matBadgeColor="warn" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
                 <mat-icon>shopping_cart</mat-icon>
             </button>
             <button matBadge="1" matBadgeColor="warn" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
                 <mat-icon>favorite</mat-icon>
             </button>
-        </div>
-        <div class="user"></div>
+        </div> -->
+        <!-- <div class="user"></div> -->
     </div>
 </mat-toolbar>
