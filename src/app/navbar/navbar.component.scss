@@ -59,9 +59,15 @@ mat-toolbar:last-child {
         margin: auto;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 1400px;
         .logo {
             width: 260px;
+            img {
+                width: 46%;
+                height: 50px;
+                object-fit: cover;
+            }
         }
         ul {
             padding: 0;

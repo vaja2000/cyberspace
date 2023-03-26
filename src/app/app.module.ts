@@ -21,6 +21,7 @@ import { AboutUsComponent } from './main/about-us/about-us.component';
 import { ContactComponent } from './main/contact/contact.component';
 import { UserPageComponent } from './main/user-page/user-page.component';
 import { HeaderComponent } from './main/home/header/header.component';
+import { CardsComponent } from './main/home/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { HeaderComponent } from './main/home/header/header.component';
     ContactComponent,
     UserPageComponent,
     HeaderComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,
