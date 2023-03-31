@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +11,7 @@ export class NavbarComponent implements OnInit {
 
   searchStatus:boolean = false
 
-  constructor() { }
+  constructor( private dailog:MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -18,5 +20,10 @@ export class NavbarComponent implements OnInit {
     if(this.searchStatus == false) {
       this.searchStatus = true
     }
+  }
+  openModal( title:boolean ) {
+    this.dailog.open(DialogComponent, {
+      data: title
+    })
   }
 }

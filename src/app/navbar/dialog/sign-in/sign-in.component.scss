@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+}
+form {
+    width: 300px;
+    section {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        mat-form-field {
+            width: 100%;
+        }
+        a {
+            cursor: pointer;
+            transition: .1s linear;
+            &:hover {
+                color: rgb(63, 81, 181);
+            }
+        }
+        button {
+            margin-top: 10px;
+            width: 70%;
+        }
+    }
+}
+.signUpPage {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}

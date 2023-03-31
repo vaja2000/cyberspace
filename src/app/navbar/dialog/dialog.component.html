@@ -1,0 +1,4 @@
+<div>
+    <app-sign-in (changePage)="onChangePageSignUp($event)" *ngIf="active"></app-sign-in>
+    <app-sign-up (changePage)="onChangePageSignIn($event)" *ngIf="!active"></app-sign-up>
+</div>

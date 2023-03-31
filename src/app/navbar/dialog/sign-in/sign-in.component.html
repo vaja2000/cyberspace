@@ -1,0 +1,28 @@
+<h1>ავტორიზაცია</h1>
+<form>
+    <section class="email">
+        <mat-form-field class="example-full-width">
+            <mat-label>ელფოსტა</mat-label>
+            <input matInput type="email">
+        </mat-form-field>
+    </section>
+    <section class="password">
+        <mat-form-field class="example-full-width">
+            <mat-label>პაროლი</mat-label>
+            <input matInput type="password">
+        </mat-form-field>
+    </section>
+    <section class="forgot_password">
+        <a>დაგავიწყდა პაროლი?</a>
+    </section>
+    <section class="signIn">
+        <button mat-raised-button color="primary">შესვლა</button>
+    </section>
+</form>
+<section class="signUpPage">
+    <button mat-button
+    (click)="signUpPage()">
+        ავტორიზაცია
+        <mat-icon class="mat-18">arrow_forward</mat-icon>
+    </button>
+</section>
