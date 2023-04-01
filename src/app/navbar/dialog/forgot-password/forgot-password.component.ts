@@ -1,11 +1,11 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-sign-up',
-  templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.scss']
+  selector: 'app-forgot-password',
+  templateUrl: './forgot-password.component.html',
+  styleUrls: ['./forgot-password.component.scss']
 })
-export class SignUpComponent implements OnInit {
+export class ForgotPasswordComponent implements OnInit {
 
   @Output() changePage = new EventEmitter<string>()
 
@@ -13,7 +13,8 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  logInPage() {
+  signInPage() {
     this.changePage.emit('signin')
   }
+
 }

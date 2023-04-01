@@ -27,6 +27,8 @@ import { CardsComponent } from './main/home/cards/cards.component';
 import { DialogComponent } from './navbar/dialog/dialog.component';
 import { SignInComponent } from './navbar/dialog/sign-in/sign-in.component';
 import { SignUpComponent } from './navbar/dialog/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './navbar/dialog/forgot-password/forgot-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,11 +47,13 @@ import { SignUpComponent } from './navbar/dialog/sign-up/sign-up.component';
     DialogComponent,
     SignInComponent,
     SignUpComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,ReactiveFormsModule,
     // material modules
     MatToolbarModule,
     MatIconModule,

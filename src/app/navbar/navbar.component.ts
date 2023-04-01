@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
       this.searchStatus = true
     }
   }
-  openModal( title:boolean ) {
+  openModal( title:string ) {
     this.dailog.open(DialogComponent, {
       data: title
     })

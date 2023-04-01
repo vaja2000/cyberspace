@@ -1,28 +1,34 @@
 <h1>ავტორიზაცია</h1>
-<form>
+<form [formGroup]="login">
     <section class="email">
         <mat-form-field class="example-full-width">
             <mat-label>ელფოსტა</mat-label>
-            <input matInput type="email">
+            <input matInput type="email"
+            formControlName="Email">
+            <mat-error *ngIf="login.get('Email').hasError('required')">ველის შევსება აუცილებელია!</mat-error>
+            <mat-error *ngIf="login.get('Email').hasError('email')">შეიყვანეთ სწორი იმეილი!</mat-error>
         </mat-form-field>
     </section>
     <section class="password">
         <mat-form-field class="example-full-width">
             <mat-label>პაროლი</mat-label>
-            <input matInput type="password">
+            <input matInput type="password"
+            formControlName="Password">
+            <mat-error *ngIf="login.get('Password').hasError('required')">ველის შევსება აუცილებელია!</mat-error>
+            <mat-error *ngIf="!login.get('Password').hasError('required')">შეიყვანეთ მინიმუმ 8 სიმბოლო!</mat-error>
         </mat-form-field>
     </section>
     <section class="forgot_password">
-        <a>დაგავიწყდა პაროლი?</a>
+        <a (click)="forgotPasswordPage()">დაგავიწყდა პაროლი?</a>
     </section>
     <section class="signIn">
-        <button mat-raised-button color="primary">შესვლა</button>
+        <button mat-raised-button color="primary"
+        [disabled]="login.invalid"
+        >შესვლა</button>
     </section>
 </form>
 <section class="signUpPage">
-    <button mat-button
-    (click)="signUpPage()">
-        ავტორიზაცია
-        <mat-icon class="mat-18">arrow_forward</mat-icon>
-    </button>
+    <a (click)="signUpPage()">
+        რეგისტრაცია
+    </a>
 </section>

@@ -8,17 +8,17 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class DialogComponent implements OnInit {
 
-  active:any = true
+  active:any;
 
-  constructor( @Inject(MAT_DIALOG_DATA) public data: { title: boolean } ) { }
+  constructor( @Inject(MAT_DIALOG_DATA) public data: { title: string } ) { }
 
   ngOnInit(): void {
     this.active = this.data
   }
-  onChangePageSignIn(e:any) {
+  onChangePageSignIn(e:string) {
     this.active = e
   }
-  onChangePageSignUp(e:boolean) {
+  onChangePageSignUp(e:string) {
     this.active = e
   }
 
