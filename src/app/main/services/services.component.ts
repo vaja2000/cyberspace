@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
+  random:any[] = [1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+
   constructor() { }
 
   ngOnInit(): void {

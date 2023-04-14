@@ -1,1 +1,41 @@
-<p>services works!</p>
+<div class="services">
+    <h1>მომსახურება და სერვისები</h1>
+    <mat-stepper>
+        <mat-step label="კომპიუტერული სერვისები">
+            <div class="cards">
+                <div *ngFor="let ran of random" class="card">
+                    <h2>ვინდოუს პაკეტი</h2>
+                    <section class="cover">
+                        <img src="../../../assets/pxfuel (1).jpg">
+                    </section>
+                    <p>ვინდოუსი, ოფისები, დრაივერები, აქტივაცია, საბაზისო პროგრამები + გარანტია!</p>
+                    <div class="price">
+                        <h3>ფასი 150ლ</h3>
+                        <button mat-raised-button color="primary">
+                            დეტალურად
+                            <mat-icon class="mat-18">ads_click</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </mat-step>
+        <mat-step label="მობილური სერვისები">
+            <div class="cards">
+                <div *ngFor="let ran of random" class="card">
+                    <h2>ვინდოუს პაკეტი</h2>
+                    <section class="cover">
+                        <img src="../../../assets/pxfuel (1).jpg">
+                    </section>
+                    <p>ვინდოუსი, ოფისები, დრაივერები, აქტივაცია, საბაზისო პროგრამები + გარანტია!</p>
+                    <div class="price">
+                        <h3>ფასი 150ლ</h3>
+                        <button mat-raised-button color="primary">
+                            დეტალურად
+                            <mat-icon class="mat-18">ads_click</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </mat-step>
+    </mat-stepper>
+</div>

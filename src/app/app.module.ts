@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 // material moodules
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -56,12 +57,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,ReactiveFormsModule,
     // material modules
     MatToolbarModule,
-    MatIconModule,
     MatButtonModule,
     MatMenuModule,
     MatBadgeModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    MatStepperModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
