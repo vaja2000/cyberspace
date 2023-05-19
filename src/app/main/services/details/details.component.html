@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="details">
+        <section class="image">
+            <img src="../../../../assets/Borcelle (3).png" alt="">
+        </section>
+        <section class="list">
+            <h1>{{myObj.name}}</h1>
+            <ul>
+                <li *ngFor="let item of myObj.list">
+                    <fa-icon [icon]="faCheck"></fa-icon>
+                    {{item}}
+                </li>
+            </ul>
+            <h2>ფასი: {{myObj.price}}₾</h2>
+        </section>
+    </div>
+    <div class="description">
+        <span><strong>აღწერა:</strong> {{myObj.description}}</span>
+    </div>
+    <div class="add-cart">
+        <button mat-raised-button color="primary"
+        *ngIf="addCartStatus"
+        (click)="addCart()">
+            <fa-icon [icon]="faCartPlus"></fa-icon>
+            კალათაში დამატება
+            <fa-icon [icon]="faCartPlus"></fa-icon>
+        </button>
+        <button class="added" mat-raised-button
+        *ngIf="!addCartStatus">
+            <fa-icon [icon]="faCheck"></fa-icon>
+            დამატებულია კალათაში
+        </button>
+    </div>
+</div>

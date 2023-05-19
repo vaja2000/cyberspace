@@ -17,12 +17,10 @@
             <h1>Cyber Space</h1>
         </section>
         <section class="right">
-            <!-- <button matBadge="1" matBadgeColor="warn" mat-raised-button color="primary">
+            <button matBadge="{{badgeQuantity}}" matBadgeColor="warn" mat-raised-button color="primary">
                 <mat-icon class="mat-18">shopping_cart</mat-icon>
                 კალათა
-            </button> -->
-            <button mat-raised-button (click)="openModal('signin')">ავტორიზაცია</button>
-            <button mat-raised-button color="primary" (click)="openModal('signup')">რეგისტრაცია</button>
+            </button>
         </section>
     </div>
 </mat-toolbar>

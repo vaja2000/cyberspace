@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DetailsComponent } from './details/details.component';
 
 @Component({
   selector: 'app-services',
@@ -9,7 +11,11 @@ export class ServicesComponent implements OnInit {
 
   random:any[] = [1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 
-  constructor() { }
+  constructor( private modal:MatDialog ) { }
+
+  openDetail() {
+    const modalRef = this.modal.open(DetailsComponent);
+  }
 
   ngOnInit(): void {
   }

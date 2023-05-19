@@ -22,14 +22,13 @@ import { HomeComponent } from './main/home/home.component';
 import { ServicesComponent } from './main/services/services.component';
 import { AboutUsComponent } from './main/about-us/about-us.component';
 import { ContactComponent } from './main/contact/contact.component';
-import { UserPageComponent } from './main/user-page/user-page.component';
 import { HeaderComponent } from './main/home/header/header.component';
 import { CardsComponent } from './main/home/cards/cards.component';
-import { DialogComponent } from './navbar/dialog/dialog.component';
-import { SignInComponent } from './navbar/dialog/sign-in/sign-in.component';
-import { SignUpComponent } from './navbar/dialog/sign-up/sign-up.component';
-import { ForgotPasswordComponent } from './navbar/dialog/forgot-password/forgot-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RateComponent } from './main/home/rate/rate.component';
+import { DetailsComponent } from './main/services/details/details.component';
+import { AlertComponent } from './main/services/details/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +41,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ServicesComponent,
     AboutUsComponent,
     ContactComponent,
-    UserPageComponent,
     HeaderComponent,
     CardsComponent,
-    DialogComponent,
-    SignInComponent,
-    SignUpComponent,
-    ForgotPasswordComponent,
+    RateComponent,
+    DetailsComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +61,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatStepperModule,
     MatIconModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
