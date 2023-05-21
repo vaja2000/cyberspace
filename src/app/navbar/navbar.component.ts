@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -10,12 +11,18 @@ export class NavbarComponent implements OnInit {
 
   searchStatus:boolean = false
   badgeQuantity!:number
+  Bars = faBars
+  dropdown!:boolean
 
   constructor( private dailog:MatDialog) { }
 
   ngOnInit(): void {
     if(localStorage.length != 0)
     this.badgeQuantity = localStorage.length
+  }
+
+  dropdownBtn() {
+    this.dropdown = this.dropdown? false : true
   }
 
   search() {

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { faCartPlus, faCheckCircle, } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { faCartPlus, faCheckCircle, faL, } from '@fortawesome/free-solid-svg-icons';
 import { AlertComponent } from './alert/alert.component';
 
 
@@ -26,17 +26,19 @@ export class DetailsComponent implements OnInit {
   }
 
   constructor(
-    private alert:MatDialog
+    private alert:MatDialog,
+    @Inject(MAT_DIALOG_DATA) public data:any
   ) { }
 
   ngOnInit(): void {
+    
   }
   addCart() {
     const alertRef = this.alert.open(AlertComponent)
     alertRef.afterClosed().subscribe( result => {
       if(result == true) {
         const objstring = JSON.stringify(this.myObj)
-        localStorage.setItem("sdbcjnahuh", objstring)
+        localStorage.setItem("dsfsdvsdvsdfvb", objstring)
         this.addCartStatus = false
       }
     })

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { environment } from 'src/environments/environment';
 
 // material moodules
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -10,6 +11,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +21,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MainComponent } from './main/main.component';
 import { FoooterComponent } from './foooter/foooter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SearchDirective } from './directives/search.directive';
 import { HomeComponent } from './main/home/home.component';
 import { ServicesComponent } from './main/services/services.component';
 import { AboutUsComponent } from './main/about-us/about-us.component';
@@ -36,7 +39,6 @@ import { AlertComponent } from './main/services/details/alert/alert.component';
     NavbarComponent,
     MainComponent,
     FoooterComponent,
-    SearchDirective,
     HomeComponent,
     ServicesComponent,
     AboutUsComponent,
@@ -52,7 +54,10 @@ import { AlertComponent } from './main/services/details/alert/alert.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
     // material modules
+    MatProgressSpinnerModule,
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,

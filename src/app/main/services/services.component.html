@@ -2,17 +2,18 @@
     <h1>მომსახურება და სერვისები</h1>
     <mat-stepper>
         <mat-step label="კომპიუტერული სერვისები">
-            <div class="cards">
-                <div *ngFor="let ran of random" class="card">
-                    <h2>ვინდოუს პაკეტი</h2>
+            <mat-spinner *ngIf="loading"></mat-spinner>
+            <div *ngIf="!loading" class="cards">
+                <div *ngFor="let card of services" class="card">
+                    <h2>{{card.name}}</h2>
                     <section class="cover">
-                        <img src="../../../assets/pxfuel (1).jpg">
+                        <img [src]="card.image">
                     </section>
-                    <p>ვინდოუსი, ოფისები, დრაივერები, აქტივაცია, საბაზისო პროგრამები + გარანტია!</p>
+                    <p>{{card.shortDescription}}</p>
                     <div class="price">
-                        <h3>ფასი 150ლ</h3>
+                        <h3>ფასი {{card.price}}ლ</h3>
                         <button mat-raised-button color="primary"
-                        (click)="openDetail()">
+                        (click)="openDetail(card.key)">
                             დეტალურად
                             <mat-icon class="mat-18">ads_click</mat-icon>
                         </button>
@@ -22,7 +23,7 @@
         </mat-step>
         <mat-step label="მობილური სერვისები">
             <div class="cards">
-                <div *ngFor="let ran of random" class="card">
+                <div class="card">
                     <h2>ვინდოუს პაკეტი</h2>
                     <section class="cover">
                         <img src="../../../assets/pxfuel (1).jpg">

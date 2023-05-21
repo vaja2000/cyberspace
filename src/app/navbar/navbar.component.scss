@@ -10,29 +10,6 @@ mat-toolbar:first-child {
         }
         .left {
             align-items: center;
-            // div {
-            //     padding: 3px;
-            //     background-color: rgb(255, 255, 255);
-            //     border-radius: 50px;
-            //     display: flex;
-            //     align-items: center;
-            //     justify-content: center;
-            //     box-sizing: border-box;
-            //     border: 2px solid rgb(63, 81, 181);
-            //     input {
-            //         outline: none;
-            //         border: none;
-            //         width: 200px;
-            //         margin-left: 5px;
-            //         animation-name: show;
-            //         animation-duration: 1s;
-            //         animation-fill-mode: forwards;
-            //         @keyframes show {
-            //             0% { width: 0px; }
-            //             100% { width: 200px; }
-            //         }
-            //     }
-            // }
         }
         .center {
             justify-content: center;
@@ -65,6 +42,9 @@ mat-toolbar:last-child {
                 height: 50px;
                 object-fit: cover;
             }
+            button {
+                display: none;
+            }
         }
         ul {
             padding: 0;
@@ -88,16 +68,6 @@ mat-toolbar:last-child {
                 color: rgb(255, 254, 254);
             }
         }
-        // .cart {
-        //     display: flex;
-        //     align-items: center;
-        //     button {
-        //         margin: 0px 5px;
-        //         mat-icon {
-        //             font-size: 30px;
-        //         }
-        //     }
-        // }
         .search {
             display: flex;
             align-items: center;
@@ -125,6 +95,44 @@ mat-toolbar:last-child {
                         100% { width: 200px; }
                     }
                 }
+            }
+        }
+    }
+    @media (min-width: 720px) and (max-width: 1070px){
+        .navbar {
+            width: 720px;
+            display: inline-block;
+            .logo,ul,.search {
+                width: 100%;
+                height: 60px;
+                display: flex;
+            }
+            .logo {
+                justify-content: space-between;
+                align-items: center;
+                img {
+                    width: 13%;
+                    height: 39px;
+                }
+                button {
+                    display: block;
+                    color: rgb(255, 255, 255);
+                    font-size: 23px;
+                }
+            }
+            ul,.search {
+                display: none;
+                justify-content: center;
+                animation-name: show;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                @keyframes show {
+                    0% { height: 0px; }
+                    100% { height: 60px; }
+                }
+            }
+            .dropdown {
+                display: flex;
             }
         }
     }

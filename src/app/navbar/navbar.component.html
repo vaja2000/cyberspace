@@ -1,14 +1,6 @@
 <mat-toolbar>
     <div class="comunication">
         <section class="left">
-            <!-- <div>
-                <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
-                (click)="search()">
-                    <mat-icon>search</mat-icon>
-                </button>
-                <input type="search" 
-                *ngIf="searchStatus">
-            </div> -->
             <button mat-icon-button color="primary" aria-label="Example icon button with a vertical three dot icon">
                 <mat-icon>facebook</mat-icon>
             </button>
@@ -28,8 +20,12 @@
     <div class="navbar">
         <div class="logo">
             <img src="../../assets/cyber space2.png" alt="">
+            <button mat-icon-button color="primary" aria-label="Example icon button with a home icon"
+            (click)="dropdownBtn()">
+                <fa-icon [icon]="Bars"></fa-icon>
+            </button>
         </div>
-        <ul>
+        <ul [ngClass]="{'dropdown' : dropdown}">
             <li
             routerLink="/"
             routerLinkActive="active"
@@ -48,7 +44,8 @@
             routerLinkActive="active"
             >კონტაქტი</li>
         </ul>
-        <div class="search">
+        <div class="search" 
+        [ngClass]="{'dropdown' : dropdown}">
             <div>
                 <input type="search" 
                 *ngIf="searchStatus">
@@ -58,14 +55,5 @@
                 </button>
             </div>
         </div>
-        <!-- <div class="cart">
-            <button matBadge="1" matBadgeColor="warn" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
-                <mat-icon>shopping_cart</mat-icon>
-            </button>
-            <button matBadge="1" matBadgeColor="warn" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
-                <mat-icon>favorite</mat-icon>
-            </button>
-        </div> -->
-        <!-- <div class="user"></div> -->
     </div>
 </mat-toolbar>

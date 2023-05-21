@@ -54,3 +54,37 @@
         object-fit: cover;
     }
 }
+@media (min-width: 1070px) and (max-width: 1400px){
+    .container {
+        height: 450px;
+        .effect {
+            height: 450px;
+            div {
+                width: 1070px;
+                padding-top: 100px;
+                text-align: center;
+                p {
+                    width: auto;
+                    padding: 0px 240px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 720px) and (max-width: 1070px){
+    .container {
+        height: 450px;
+        .effect {
+            height: 450px;
+            div {
+                width: 720px;
+                padding-top: 100px;
+                text-align: center;
+                p {
+                    width: auto;
+                    padding: 0px 240px;
+                }
+            }
+        }
+    }
+}
