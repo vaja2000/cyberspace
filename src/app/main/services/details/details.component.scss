@@ -1,14 +1,13 @@
 .container {
-    width: 980px;
-    height: 500px;
+    width: 100%;
     .details {
         display: flex;
         width: 100%;
         .image {
             width: 35%;
             img {
-                width: 300px;
-                height: 300px;
+                width: 280px;
+                height: 280px;
                 object-fit: cover;
                 border-radius: 10px;
             }
@@ -60,11 +59,9 @@
         display: flex;
         justify-content: center;
         button {
-            width: 70%;
             height: 50px;
             font-family: bpg nino mtavruli;
             font-size: 22px;
-            letter-spacing: 1px;
             fa-icon {
                 margin: 10px;
                 font-size: 30px;
@@ -73,6 +70,47 @@
         .added {
             background-color: rgb(6, 176, 0);
             color: rgb(255, 255, 255);
+        }
+    }
+    @media (max-width: 1170px) {
+        .details {
+            display: block;
+            .image {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            .list {
+                width: 100%;
+                h1 {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                ul {
+                    text-align: center;
+                    padding: 0;
+                }
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+        .description {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    @media (max-width: 750px) {
+        .add-cart {
+            button {
+                font-size: 15px;
+                fa-icon {
+                    font-size: 20px;
+                }
+                fa-icon:last-child {
+                    display: none;
+                }
+            }
         }
     }
 }

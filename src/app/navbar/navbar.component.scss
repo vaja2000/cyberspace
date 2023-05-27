@@ -28,7 +28,7 @@ mat-toolbar:first-child {
 }
 mat-toolbar:last-child {
     height: auto;
-    box-shadow: 1px 4px 9px 1px rgba(174, 188, 255, 0.8);
+    box-shadow: 1px 1px 9px 1px rgba(174, 188, 255, 0.8);
     .navbar {
         margin: auto;
         display: flex;
@@ -68,41 +68,50 @@ mat-toolbar:last-child {
                 color: rgb(255, 254, 254);
             }
         }
-        .search {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
+        .cart {
             width: 260px;
-            div {
-                padding: 3px;
-                background-color: rgb(255, 255, 255);
-                border-radius: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                box-sizing: border-box;
-                border: 2px solid rgb(63, 81, 181);
-                input {
-                    outline: none;
-                    border: none;
-                    width: 200px;
-                    margin-left: 5px;
-                    animation-name: show;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                    @keyframes show {
-                        0% { width: 0px; }
-                        100% { width: 200px; }
-                    }
-                }
+            display: flex;
+            justify-content: flex-end;
+            button {
+                font-size: 25px;
+                color: rgb(255, 255, 255);
             }
         }
+        // .search {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: flex-end;
+        //     width: 260px;
+        //     div {
+        //         padding: 3px;
+        //         background-color: rgb(255, 255, 255);
+        //         border-radius: 50px;
+        //         display: flex;
+        //         align-items: center;
+        //         justify-content: flex-end;
+        //         box-sizing: border-box;
+        //         border: 2px solid rgb(63, 81, 181);
+        //         input {
+        //             outline: none;
+        //             border: none;
+        //             width: 200px;
+        //             margin-left: 5px;
+        //             animation-name: show;
+        //             animation-duration: 1s;
+        //             animation-fill-mode: forwards;
+        //             @keyframes show {
+        //                 0% { width: 0px; }
+        //                 100% { width: 200px; }
+        //             }
+        //         }
+        //     }
+        // }
     }
     @media (min-width: 720px) and (max-width: 1070px){
         .navbar {
-            width: 720px;
+            width: 100%;
             display: inline-block;
-            .logo,ul,.search {
+            .logo,ul,.cart {
                 width: 100%;
                 height: 60px;
                 display: flex;
@@ -120,19 +129,75 @@ mat-toolbar:last-child {
                     font-size: 23px;
                 }
             }
-            ul,.search {
+            ul,.cart {
                 display: none;
                 justify-content: center;
                 animation-name: show;
-                animation-duration: 1s;
+                animation-duration: .50s;
                 animation-fill-mode: forwards;
                 @keyframes show {
                     0% { height: 0px; }
                     100% { height: 60px; }
                 }
+                button {
+                    opacity: 0;
+                    animation-name: opc;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    @keyframes opc {
+                        50% { opacity: 0; }
+                        100% { opacity: 1; }
+                    }
+                }
             }
             .dropdown {
                 display: flex;
+            }
+        }
+    }
+    @media (min-width: 360px) and (max-width: 720px){
+        .navbar {
+            width: 100%;
+            display: inline-block;
+            .logo {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img {
+                    width: 13%;
+                    height: 39px;
+                }
+                button {
+                    display: block;
+                    color: rgb(255, 255, 255);
+                    font-size: 23px;
+                }
+            }
+            ul,.cart {
+                display: none;
+                justify-content: center;
+                animation-name: show;
+                animation-duration: .50s;
+                animation-fill-mode: forwards;
+                @keyframes show {
+                    0% { height: 0px; }
+                    100% { height: auto; }
+                }
+                button {
+                    opacity: 0;
+                    animation-name: opc;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    @keyframes opc {
+                        50% { opacity: 0; }
+                        100% { opacity: 1; }
+                    }
+                }
+            }
+            .dropdown {
+                display: block;
             }
         }
     }

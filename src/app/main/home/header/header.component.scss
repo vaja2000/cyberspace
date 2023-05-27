@@ -48,10 +48,12 @@
             }
         }
     }
-    video {
+    .background {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        background-image: url("../../../../assets/background/4.png");
+        background-size: cover;
+        background-position-y: 100%;
     }
 }
 @media (min-width: 1070px) and (max-width: 1400px){
@@ -83,6 +85,32 @@
                 p {
                     width: auto;
                     padding: 0px 240px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 360px) and (max-width: 720px) {
+    .container {
+        height: 300px;
+        .effect {
+            height: 300px;
+            div {
+                width: 350px;
+                padding-top: 40px;
+                text-align: center;
+                h1 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 11px;
+                    width: auto;
+                    padding: 0;
+                }
+                button {
+                    font-size: 20px;
+                    width: 150px;
+                    height: 45px;
                 }
             }
         }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit {
   searchStatus:boolean = false
   badgeQuantity!:number
   Bars = faBars
+  cart = faCartShopping
   dropdown!:boolean
 
   constructor( private dailog:MatDialog) { }
@@ -25,9 +26,9 @@ export class NavbarComponent implements OnInit {
     this.dropdown = this.dropdown? false : true
   }
 
-  search() {
-    if(this.searchStatus == false) {
-      this.searchStatus = true
-    }
-  }
+  // search() {
+  //   if(this.searchStatus == false) {
+  //     this.searchStatus = true
+  //   }
+  // }
 }

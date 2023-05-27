@@ -1,0 +1,13 @@
+app-navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+div {
+    height: 148px;
+}
+@media (max-width: 1070px) {
+    div {
+        height: 120px;
+    }
+}

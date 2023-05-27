@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar appNavbarScroll>
     <div class="comunication">
         <section class="left">
             <button mat-icon-button color="primary" aria-label="Example icon button with a vertical three dot icon">
@@ -9,10 +9,7 @@
             <h1>Cyber Space</h1>
         </section>
         <section class="right">
-            <button matBadge="{{badgeQuantity}}" matBadgeColor="warn" mat-raised-button color="primary">
-                <mat-icon class="mat-18">shopping_cart</mat-icon>
-                კალათა
-            </button>
+            
         </section>
     </div>
 </mat-toolbar>
@@ -44,7 +41,14 @@
             routerLinkActive="active"
             >კონტაქტი</li>
         </ul>
-        <div class="search" 
+        <div class="cart"
+        [ngClass]="{'dropdown' : dropdown}">
+            <button mat-icon-button aria-label="Example icon button with a menu icon"
+            matBadge="{{badgeQuantity}}" matBadgeColor="warn">
+                <fa-icon [icon]="cart"></fa-icon>
+            </button>
+        </div>
+        <!-- <div class="search" 
         [ngClass]="{'dropdown' : dropdown}">
             <div>
                 <input type="search" 
@@ -54,6 +58,6 @@
                     <mat-icon>search</mat-icon>
                 </button>
             </div>
-        </div>
+        </div> -->
     </div>
 </mat-toolbar>

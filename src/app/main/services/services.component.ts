@@ -35,7 +35,10 @@ export class ServicesComponent implements OnInit {
         console.log(id)
         let data = element.payload.doc.data()
         if(id == key) {
-          this.modal.open(DetailsComponent, {data});
+          this.modal.open(DetailsComponent, {
+            data,
+            height: '530px'
+          });
         }
       });
     })

@@ -61,3 +61,33 @@
         }
     }
 }
+
+@media (min-width: 530px) and (max-width: 1400px) {
+    .services {
+        width: 100%;
+    }
+}
+@media (min-width: 360px) and (max-width: 530px) {
+    .services {
+        width: 100%;
+        margin: 0;
+        mat-stepper {
+            .cards {
+                margin: 0;
+                .card {
+                    margin: 10px 0px;
+                    .cover {
+                        img {
+                            height: 247px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// @media (min-width: 360px) and (max-width: 720px) {
+//     .services {
+//         width: px;
+//     }
+// }
