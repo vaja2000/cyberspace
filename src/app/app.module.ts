@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -70,6 +71,7 @@ import { CartComponent } from './main/cart/cart.component';
     MatInputModule,
     MatStepperModule,
     MatIconModule,
+    MatExpansionModule,
     FontAwesomeModule,
   ],
   providers: [],

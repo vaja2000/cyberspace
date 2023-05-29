@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, } from '@angular/core';
 import { FirebaseClientService } from 'src/app/services/firebase-client.service';
 
 @Component({
@@ -9,8 +9,11 @@ import { FirebaseClientService } from 'src/app/services/firebase-client.service'
 export class CartComponent implements OnInit {
 
   cartData:any[] = []
+  cartMobileSize:boolean = true
 
-  constructor ( private firebase:FirebaseClientService ) { }
+  constructor ( 
+    private firebase:FirebaseClientService,
+     ) { }
 
 
   ngOnInit(): void {
@@ -26,5 +29,23 @@ export class CartComponent implements OnInit {
       })
     }
   }
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.applyResponsiveStyles();
+    }, 0);
+  }
+  @HostListener('window:resize')
+  onWindowResize() {
+    this.applyResponsiveStyles();
+  }
+  private applyResponsiveStyles() {
+    
+    const windowWidth = window.innerWidth;
 
+    if (windowWidth < 720) {
+      this.cartMobileSize = true
+    } else {
+      this.cartMobileSize = false
+    }
+  }
 }

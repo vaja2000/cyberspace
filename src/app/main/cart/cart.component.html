@@ -7,36 +7,60 @@
         </div>
         <div class="cart">
             <div class="cart-container">
-                <div class="th">
-                    <section class="empty"></section>
-                    <section class="name"><a>დასახელება</a></section>
-                    <section class="price"><a>ფასი</a></section>
-                    <section class="code"><a>კოდი</a></section>
-                </div>
-                <div class="td"
-                *ngFor="let data of cartData; index as i">
-                    <div class="service">
-                        <section class="photo">
-                            <span>{{i+1}}.</span>
-                            <img [src]="data.image" alt="">
-                        </section>
-                        <section class="name">
-                            <span>{{data.name}}</span>
-                        </section>
-                        <section class="price">
-                            <span>{{data.price}}₾</span>
-                        </section>
-                        <section class="code">
-                            <span>85475</span>
-                            <button mat-mini-fab color="warn" aria-label="Example icon button with a delete icon">
-                                <mat-icon>delete</mat-icon>
-                            </button>
-                        </section>
+                <div class="table"
+                *ngIf="!cartMobileSize">
+                    <div class="th">
+                        <section class="empty"></section>
+                        <section class="name"><a>დასახელება</a></section>
+                        <section class="price"><a>ფასი</a></section>
+                        <section class="code"><a>კოდი</a></section>
+                    </div>
+                    <div class="td"
+                    *ngFor="let data of cartData; index as i">
+                        <div class="service">
+                            <section class="photo">
+                                <span>{{i+1}}.</span>
+                                <img [src]="data.image" alt="">
+                            </section>
+                            <section class="name">
+                                <span>{{data.name}}</span>
+                            </section>
+                            <section class="price">
+                                <span>{{data.price}}₾</span>
+                            </section>
+                            <section class="code">
+                                <span>85475</span>
+                                <button mat-mini-fab color="warn" aria-label="Example icon button with a delete icon">
+                                    <mat-icon>delete</mat-icon>
+                                </button>
+                            </section>
+                        </div>
                     </div>
                 </div>
+                <mat-expansion-panel hideToggle
+                *ngIf="cartMobileSize">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        <img src="" alt="">
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        This is a summary of the content
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p>This is the primary content of the panel.</p>
+                  </mat-expansion-panel>
             </div>
             <div class="order">
-                
+                <h1>ჯამი</h1>
+                <div class="line"></div>
+                <div class="sum">
+                    <h3>სულ თანხა:</h3>
+                    <h4>150₾</h4>
+                </div>
+                <div class="line"></div>
+                <div class="sendOrder">
+                    <button mat-flat-button color="primary">შეკვეთის გაგზავნა</button>
+                </div>
             </div>
         </div>
     </div>
