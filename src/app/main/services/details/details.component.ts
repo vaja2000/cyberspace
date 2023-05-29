@@ -17,13 +17,7 @@ export class DetailsComponent implements OnInit {
   faCartPlus = faCartPlus
 
   addCartStatus:boolean = true
-  myObj:any = {
-    name: "ვინდოუსის ინსტალაცია",
-    Image: "",
-    list: [ "Windows 10/11","დრაივერების ინსტალაცია","აქტივაცია" ],
-    price: 50,
-    description: "ვინდოუსის ინსტალაცია და გამართვა Windows 10 ან Windows 11, ყველა საჭირო დრაივერის დაყენება, ვინდოუსის ლიცენზირება-აქტივაცია!",
-  }
+
 
   constructor(
     private alert:MatDialog,
@@ -37,8 +31,8 @@ export class DetailsComponent implements OnInit {
     const alertRef = this.alert.open(AlertComponent)
     alertRef.afterClosed().subscribe( result => {
       if(result == true) {
-        const objstring = JSON.stringify(this.myObj)
-        localStorage.setItem("dsfsdvsdvsdfvb", objstring)
+        const objstring = JSON.stringify(this.data)
+        localStorage.setItem(this.data.key, objstring)
         this.addCartStatus = false
       }
     })

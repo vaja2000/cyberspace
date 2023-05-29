@@ -6,8 +6,13 @@ app-navbar {
 div {
     height: 148px;
 }
-@media (max-width: 1070px) {
+@media (min-width: 720px) and (max-width: 1070px) {
     div {
         height: 120px;
+    }
+}
+@media (min-width: 360px) and (max-width: 720px){
+    div {
+        height: 100px;
     }
 }

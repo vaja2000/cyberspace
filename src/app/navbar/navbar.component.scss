@@ -108,6 +108,9 @@ mat-toolbar:last-child {
         // }
     }
     @media (min-width: 720px) and (max-width: 1070px){
+        mat-toolbar:first-child {
+            height: 40px;
+        }
         .navbar {
             width: 100%;
             display: inline-block;
@@ -178,23 +181,6 @@ mat-toolbar:last-child {
             ul,.cart {
                 display: none;
                 justify-content: center;
-                animation-name: show;
-                animation-duration: .50s;
-                animation-fill-mode: forwards;
-                @keyframes show {
-                    0% { height: 0px; }
-                    100% { height: auto; }
-                }
-                button {
-                    opacity: 0;
-                    animation-name: opc;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                    @keyframes opc {
-                        50% { opacity: 0; }
-                        100% { opacity: 1; }
-                    }
-                }
             }
             .dropdown {
                 display: block;

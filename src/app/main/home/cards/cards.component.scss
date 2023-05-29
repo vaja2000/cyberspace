@@ -51,15 +51,15 @@
     }
 }
 
-@media (min-width: 1070px) and (max-width: 1400px){
+@media (max-width: 1400px){
     .cards {
-        width: 1024px;
+        width: 100%;
         justify-content: center;
     }
 }
-@media (min-width: 720px) and (max-width: 1070px){
-    .cards {
-        width: 720px;
-        justify-content: center;
-    }
-}
+// @media (min-width: 720px) and (max-width: 1070px){
+//     .cards {
+//         width: 720px;
+//         justify-content: center;
+//     }
+// }

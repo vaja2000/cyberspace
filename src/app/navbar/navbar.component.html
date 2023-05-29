@@ -29,22 +29,23 @@
             [routerLinkActiveOptions]="{exact:true}"
             >მთავარი</li>
             <li 
-            routerLink="services"
+            routerLink="/services"
             routerLinkActive="active"
             >სერვისები</li>
             <li 
-            routerLink="about-us"
+            routerLink="/about-us"
             routerLinkActive="active"
             >ჩვენს შესახებ</li>
             <li 
-            routerLink="contact"
+            routerLink="/contact"
             routerLinkActive="active"
             >კონტაქტი</li>
         </ul>
         <div class="cart"
         [ngClass]="{'dropdown' : dropdown}">
             <button mat-icon-button aria-label="Example icon button with a menu icon"
-            matBadge="{{badgeQuantity}}" matBadgeColor="warn">
+            matBadge="{{badgeQuantity}}" matBadgeColor="warn"
+            routerLink="/cart">
                 <fa-icon [icon]="cart"></fa-icon>
             </button>
         </div>

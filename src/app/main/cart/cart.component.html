@@ -1,0 +1,43 @@
+<div class="background">
+    <div class="container">
+        <div class="pages">
+            <a class="home">მთავარი</a>
+            <span> > </span>
+            <a> კალათა</a>
+        </div>
+        <div class="cart">
+            <div class="cart-container">
+                <div class="th">
+                    <section class="empty"></section>
+                    <section class="name"><a>დასახელება</a></section>
+                    <section class="price"><a>ფასი</a></section>
+                    <section class="code"><a>კოდი</a></section>
+                </div>
+                <div class="td"
+                *ngFor="let data of cartData; index as i">
+                    <div class="service">
+                        <section class="photo">
+                            <span>{{i+1}}.</span>
+                            <img [src]="data.image" alt="">
+                        </section>
+                        <section class="name">
+                            <span>{{data.name}}</span>
+                        </section>
+                        <section class="price">
+                            <span>{{data.price}}₾</span>
+                        </section>
+                        <section class="code">
+                            <span>85475</span>
+                            <button mat-mini-fab color="warn" aria-label="Example icon button with a delete icon">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="order">
+                
+            </div>
+        </div>
+    </div>
+</div>

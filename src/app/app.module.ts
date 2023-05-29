@@ -33,6 +33,7 @@ import { RateComponent } from './main/home/rate/rate.component';
 import { DetailsComponent } from './main/services/details/details.component';
 import { AlertComponent } from './main/services/details/alert/alert.component';
 import { NavbarScrollDirective } from './directives/navbar-scroll.directive';
+import { CartComponent } from './main/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { NavbarScrollDirective } from './directives/navbar-scroll.directive';
     DetailsComponent,
     AlertComponent,
     NavbarScrollDirective,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

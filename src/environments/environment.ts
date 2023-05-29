@@ -9,7 +9,7 @@ export const environment = {
   },
   firebaseConfig: {
     apiKey: "AIzaSyDoNVA9c9zFL0XCMYLlvPn_0ZE3C7Quec0",
-    authDomain: "cyber-space-d25c6.firebaseapp.com",
+    authDomain: "cbspace.ge",
     databaseURL: "https://cyber-space-d25c6-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "cyber-space-d25c6",
     storageBucket: "cyber-space-d25c6.appspot.com",
