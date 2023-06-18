@@ -165,6 +165,44 @@
                 .cart-container {
                     width: 90%;
                     margin: 20px auto;
+                    mat-expansion-panel {
+                        mat-panel-title {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            font-family: bpg nino mtavruli;
+                            fa-icon {
+                                font-size: 20px;
+                            }
+                        }
+                        .details {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            img {
+                                width: 70px;
+                                height: 70px;
+                                border-radius: 3px;
+                            }
+                            span {
+                                font-family: bpg nino mtavruli;
+                                font-size: 20px;
+                                strong {
+                                    color: rgb(63, 81, 181);
+                                    font-family: sans-serif;
+                                    font-size: 30px;
+                                }
+                            }
+                        }  
+                        .delete {
+                            display: flex;
+                            justify-content: center;
+                            margin-top: 10px;
+                            button {
+                                font-family: bpg nino mtavruli;
+                            }
+                        }
+                    }
                 }
                 .order {
                     width: 70%;

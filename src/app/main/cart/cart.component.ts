@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit, } from '@angular/core';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FirebaseClientService } from 'src/app/services/firebase-client.service';
 
 @Component({
@@ -10,6 +11,8 @@ export class CartComponent implements OnInit {
 
   cartData:any[] = []
   cartMobileSize:boolean = true
+  sum:number = 0
+  dropdown = faCaretDown
 
   constructor ( 
     private firebase:FirebaseClientService,
@@ -24,11 +27,21 @@ export class CartComponent implements OnInit {
           const fbKey = element.payload.doc.id
           if(fbKey == key) {
             this.cartData.push(element.payload.doc.data())
+            const price = Number(element.payload.doc.data().price)
+            this.sum += price
           }
         });
       })
     }
   }
+
+  deleteCartItem(key:string,index:number,price:number) {
+    this.cartData.splice(index,1)
+    console.log(this.cartData)
+    localStorage.removeItem(key)
+    this.sum -= price
+  } 
+
   ngAfterViewInit() {
     setTimeout(() => {
       this.applyResponsiveStyles();

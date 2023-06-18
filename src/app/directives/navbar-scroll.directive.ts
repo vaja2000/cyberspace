@@ -9,7 +9,6 @@ export class NavbarScrollDirective {
 
   @HostListener('window:scroll') onScroll() {
     if(window.pageYOffset > 100) {
-      console.log(window.pageYOffset)
       this.el.nativeElement.style.display = "none"
     }else {
       this.el.nativeElement.style.display = "flex"

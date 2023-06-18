@@ -15,8 +15,4 @@ export class FirebaseClientService {
     return this.firebase.collection(environment.firebaseCollection.service)
     .snapshotChanges()
   }
-  // getKey(key:string):any {
-  //   return this.firebase.collection(environment.firebaseCollection.service)
-  //   .doc(key).
-  // }
 }

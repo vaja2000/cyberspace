@@ -30,32 +30,44 @@
                             </section>
                             <section class="code">
                                 <span>85475</span>
-                                <button mat-mini-fab color="warn" aria-label="Example icon button with a delete icon">
+                                <button mat-mini-fab color="warn" 
+                                aria-label="Example icon button with a delete icon"
+                                (click)="deleteCartItem(data.key,i,data.price)">
                                     <mat-icon>delete</mat-icon>
                                 </button>
                             </section>
                         </div>
                     </div>
                 </div>
-                <mat-expansion-panel hideToggle
-                *ngIf="cartMobileSize">
-                    <mat-expansion-panel-header>
-                      <mat-panel-title>
-                        <img src="" alt="">
-                      </mat-panel-title>
-                      <mat-panel-description>
-                        This is a summary of the content
-                      </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <p>This is the primary content of the panel.</p>
-                  </mat-expansion-panel>
+                <mat-accordion *ngIf="cartMobileSize">
+                    <mat-expansion-panel hideToggle
+                    *ngFor="let data of cartData; index as i">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title>
+                            {{data.name}}
+                            <fa-icon [icon]="dropdown"></fa-icon>
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div class="details">
+                            <img [src]="data.image">
+                            <span>ფასი:<strong>{{data.price}}</strong>₾</span>
+                        </div>
+                        <div class="delete">
+                            <button mat-flat-button color="warn"
+                            (click)="deleteCartItem(data.key,i,data.price)"
+                            >კალათადან ამოშლა</button>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
             </div>
             <div class="order">
                 <h1>ჯამი</h1>
                 <div class="line"></div>
                 <div class="sum">
                     <h3>სულ თანხა:</h3>
-                    <h4>150₾</h4>
+                    <aside>
+                        <h4>{{sum}}₾</h4>
+                    </aside>
                 </div>
                 <div class="line"></div>
                 <div class="sendOrder">
